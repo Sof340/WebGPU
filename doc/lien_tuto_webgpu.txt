@@ -1,0 +1,1 @@
+https://codelabs.developers.google.com/your-first-webgpu-app?hl=fr&authuser=0#0
