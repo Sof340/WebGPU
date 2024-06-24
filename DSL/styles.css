@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #fcfcfc;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    max-height: 150px;
+    /* Set a max height for scrollable area */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+}
+
+#dictionary-details {
+    margin-top: 20px;
+}
+
+.entry {
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+.content {
+    margin-right: 200px;
+    /* Adjust based on the width of the right frame */
+    padding: 20px;
+}
+
+.right-frame {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    /* Adjust the width as needed */
+    height: 100%;
+    background-color: #f0f0f0;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    /* Add scroll if content exceeds height */
+}

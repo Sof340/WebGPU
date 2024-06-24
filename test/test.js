@@ -64,26 +64,6 @@ let graph2 = [
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Representation of the graph matrix
 const graph = [
     [0.0, 3.0, 4.0, 2.0, 7.0],
@@ -97,6 +77,7 @@ const graph = [
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
 
 // Function to calculate the cost of a solution
 function cost(G, s) {
@@ -153,7 +134,7 @@ function TSP(G) {
     let ntrial = 1, alpha = 0.99, T = 30;
     let snew, cnew, x;
 
-    while (ntrial <= 100000) {
+    while (ntrial <= 10000000) {
         let n = getRandomInt(0, G.length - 1); // Corrected range
         let m = getRandomInt(0, G.length - 1); // Corrected range
 
@@ -178,7 +159,7 @@ function TSP(G) {
         T = alpha * T;
         ntrial += 1;
         list_sol.push(sbest); // Optional: Add solution to list
-        console.log(ntrial); // Track progress (optional)
+        //console.log(ntrial); // Track progress (optional)
     }
 
     // document.write(cost(G, sbest)); // If using for debugging
@@ -192,7 +173,7 @@ function TSP(G) {
 
 const startTime = performance.now();
 
-const result = TSP(graph2); // Call the TSP function
+const result = TSP(matrix); // Call the TSP function
 const endTime = performance.now();
 
 const tempsExecution = endTime - startTime;
